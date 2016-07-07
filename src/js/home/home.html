@@ -1,0 +1,53 @@
+ <div class="home-page">
+
+  <!-- Splash banner that only shows when not logged in -->
+  <div class="banner" show-authed="false">
+    <div class="container">
+      <h1 class="logo-font" ng-bind="::$ctrl.appName | lowercase"></h1>
+      <p>A place to share your knowledge.</p>
+    </div>
+  </div>
+
+  <div class="container page">
+    <div class="row">
+
+
+      <!-- Main view - contains tabs -->
+      <div class="col-md-9">
+        <!-- NgTabs Test -->
+        <div class="ng-tabs-test">
+          <ng-tabs on-select="$ctrl.onSelect(selectedPane)">
+            <ng-pane title="Pane1">
+              <div class="content">Pane1 Content</div>
+            </ng-pane>
+            <ng-pane title="Pane2">
+              <div class="content">Pane2 Content</div>
+            </ng-pane>
+          </ng-tabs>
+        </div>
+
+      </div>
+
+      <!-- Sidebar where popular tags are listed -->
+      <div class="col-md-3">
+        <div class="sidebar">
+
+          <p>Popular Tags</p>
+
+          <div class="tag-list">
+            <a href="" class="tag-default tag-pill">
+              Tag One
+            </a>
+            <a href="" class="tag-default tag-pill">
+              Tag Two
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- End the row & container divs -->
+    </div>
+  </div>
+
+</div>
